@@ -36,28 +36,28 @@ export const Navbar: React.FC<navbarProps> = ({}) => {
         <div className="text-sm lg:flex-grow">
           <Link
             href="SortAlgorithm"
-            className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+            className="px-1 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
           >
             Sort Algorithms
           </Link>
           <Link
             href="SnakeAI"
-            className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+            className="px-1 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
           >
             Snake AI
           </Link>
           <Link
             href="FlappyBirds"
-            className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
+            className="px-2 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
           >
             Flappy Birds AI
           </Link>
           <Link
             legacyBehavior
-            className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
+            className="px-2 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
             href="https://github.com/vallen97"
           >
-            <a target="_blank" rel="noopener noreferrer">
+            <a className="px-2" target="_blank" rel="noopener noreferrer">
               GitHub
             </a>
           </Link>

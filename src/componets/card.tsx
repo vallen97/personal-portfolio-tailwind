@@ -49,13 +49,18 @@ export const Card: React.FC<cardProps> = (props) => {
     button = <Link href={props.buttonLink}>{props.buttonTitle}</Link>;
     // button = <Link href="/">Home</Link>;
   }
-
+  // #carousel-status {
+  //   color: rgb(0, 0, 0);
+  // }
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg border-2 border-sky-500">
-      <ImageSlider slides={imgArrays} />
+      <ImageSlider style={{ background: "black" }} slides={imgArrays} />
+
       <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">{props.cardTitle}</div>
-        <p className="text-gray-700 text-base">
+        <div className=" text-black font-bold text-xl mb-2">
+          {props.cardTitle}
+        </div>
+        <p className="text-black text-base">
           {showMore
             ? props.cardDescription
             : `${props.cardDescription.substring(0, 125)}`}

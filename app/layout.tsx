@@ -12,12 +12,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" style={{ height: "100%" }}>
       {}
 
       <body>
         <Navbar />
-        <div>{children}</div>
+        <div style={{ height: "100%" }} className="bg-zinc-200 ">
+          {children}
+        </div>
       </body>
     </html>
   );

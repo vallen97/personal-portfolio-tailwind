@@ -39,7 +39,7 @@ export default function page() {
   }, []);
 
   return (
-    <div className="px-8">
+    <div className="px-8" style={{ height: "100%" }}>
       {/* Save And Load Menus */}
       <div className="py-4 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 place-items-center">
         {isGameLoaded ? (
@@ -175,7 +175,7 @@ export default function page() {
       {/* Span and button for Next Gen */}
       <div className="py-4 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
         <span
-          className=" lg:col-start-1  lg:col-end-1 text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-pink-600 bg-pink-200 uppercase last:mr-0 mr-1"
+          className=" lg:col-start-1  lg:col-end-1 text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-black uppercase last:mr-0 mr-1"
           ref={labelGen}
         >
           Current Generation: 0
@@ -193,7 +193,7 @@ export default function page() {
 
       {/* Span speed */}
       <div className="py-4 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
-        <span className=" col-span-1  text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-pink-600 bg-pink-200 uppercase last:mr-0 mr-1">
+        <span className=" col-span-1  text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-black uppercase last:mr-0 mr-1">
           Current Speed: {currentSpeed * 10} ms
         </span>
       </div>
@@ -207,7 +207,7 @@ export default function page() {
           min="1"
           max="10"
           value={currentSpeed}
-          className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+          className="w-full h-2 bg-blackrounded-lg appearance-none cursor-pointer dark:bg-gray-700"
           onChange={(val: any) => {
             setCurrentSpeed(val.nativeEvent.target.value);
 
@@ -219,7 +219,7 @@ export default function page() {
       {/* Span fot the  number of snakes */}
       <div className="py-4 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
         <span
-          className=" col-span-1 text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-pink-600 bg-pink-200 uppercase last:mr-0 mr-1"
+          className=" col-span-1 text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-black uppercase last:mr-0 mr-1"
           ref={labelSnakesAlive}
         >
           Snakes Alive: {numberOfSnakes}
@@ -235,7 +235,7 @@ export default function page() {
           min="1"
           max="100"
           value={numberOfSnakes}
-          className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+          className="w-full h-2 bg-black rounded-lg appearance-none cursor-pointer dark:bg-gray-900"
           onChange={(val: any) => {
             setNumberOfSnakes(val.nativeEvent.target.value);
 
@@ -247,7 +247,7 @@ export default function page() {
       {/* Span that displays the score */}
       <div className="py-4 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
         <span
-          className="col-span-1  text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-pink-600 bg-pink-200 uppercase last:mr-0 mr-1"
+          className="col-span-1  text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-black uppercase last:mr-0 mr-1"
           ref={labelSnakeScore}
         >
           Current Score: 0

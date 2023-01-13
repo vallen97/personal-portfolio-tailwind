@@ -12,6 +12,7 @@ const ImageSlider = ({ slides }: any) => {
           <Image
             key={index}
             src={slide.image}
+            height={451}
             width={800}
             alt={"image" + index}
           />

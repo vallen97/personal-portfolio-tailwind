@@ -69,8 +69,8 @@ export default function HomePage() {
   React.useMemo(() => initalizeProjects(), []);
 
   return (
-    <div className="px-8">
-      <main className="flex justify-center items-center flex-col">
+    <div className="px-8  " style={{ height: "100%" }}>
+      <main className="justify-center items-center flex-col">
         <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
           {projects.map((data: any, index: number) => (
             <React.Fragment key={index.toString()}>
