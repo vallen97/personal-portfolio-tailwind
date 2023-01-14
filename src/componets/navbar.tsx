@@ -6,11 +6,6 @@ interface navbarProps {}
 
 export const Navbar: React.FC<navbarProps> = ({}) => {
   const [expand, setExpand] = useState<boolean>(true);
-  const windowSize = useRef([window.innerWidth, window.innerHeight]);
-
-  useEffect(() => {
-    if (windowSize.current[0] < 1024) setExpand(true);
-  }, []);
 
   return (
     <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6">
