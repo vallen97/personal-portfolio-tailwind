@@ -5,7 +5,7 @@ import React from "react";
 interface navbarProps {}
 
 export const Navbar: React.FC<navbarProps> = ({}) => {
-  const [expand, setExpand] = useState<boolean>(true);
+  const [expand, setExpand] = useState<boolean>(false);
 
   return (
     <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6">
@@ -41,33 +41,31 @@ export const Navbar: React.FC<navbarProps> = ({}) => {
       <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
         {expand ? (
           <>
-            <div className="text-sm lg:flex-grow">
+            <div className="text-sm lg:flex-grow block lg:hidden">
               <Link
                 href="SortAlgorithm"
-                className="p-1 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+                className="sm:pb-4 sm:pt-4 lg:inline-block block lg:px-4 text-teal-200 hover:text-white"
               >
                 Sort Algorithms
               </Link>
               <Link
                 href="SnakeAI"
-                className="p-1 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+                className="sm:pb-4 lg:inline-block block lg:px-4 text-teal-200 hover:text-white"
               >
                 Snake AI
               </Link>
               <Link
                 href="FlappyBirds"
-                className="p-2 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
+                className="sm:pb-4 lg:inline-block block lg:px-4 text-teal-200 hover:text-white"
               >
                 Flappy Birds AI
               </Link>
               <Link
                 legacyBehavior
-                className="p-2 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
+                className="sm:pb-4 lg:inline-block block lg:px-4 text-teal-200 hover:text-white"
                 href="https://github.com/vallen97"
               >
-                <a className="p-2" target="_blank" rel="noopener noreferrer">
-                  GitHub
-                </a>
+                GitHub
               </Link>
             </div>
           </>
@@ -76,6 +74,35 @@ export const Navbar: React.FC<navbarProps> = ({}) => {
             <div></div>
           </>
         )}
+        <div className="text-sm lg:flex-grow hidden lg:block">
+          <Link
+            href="SortAlgorithm"
+            className="p-1 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+          >
+            Sort Algorithms
+          </Link>
+          <Link
+            href="SnakeAI"
+            className="p-1 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+          >
+            Snake AI
+          </Link>
+          <Link
+            href="FlappyBirds"
+            className="p-2 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
+          >
+            Flappy Birds AI
+          </Link>
+          <Link
+            legacyBehavior
+            className="p-2 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
+            href="https://github.com/vallen97"
+          >
+            <a className="p-2" target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+          </Link>
+        </div>
       </div>
     </nav>
   );

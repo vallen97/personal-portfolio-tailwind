@@ -76,7 +76,7 @@ export default function HomePage() {
             <React.Fragment key={index.toString()}>
               <Card
                 carouselImages={data.imageURKIDs}
-                imageAlt={data.imageAlt}
+                imageAlt={data.imageAlt + index.toString()}
                 cardTitle={data.cardTitle}
                 cardDescription={data.cardDescription}
                 buttonTitle={data.buttonTitle}

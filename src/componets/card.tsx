@@ -64,7 +64,6 @@ export const Card: React.FC<cardProps> = (props) => {
           {showMore
             ? props.cardDescription
             : `${props.cardDescription.substring(0, 125)}`}
-          {/* TODO: if the string is not log enough maybe dont show the show more or less button */}
           <br></br>
           <button
             className="text-gray-800 font-semibold rounded shadow"
