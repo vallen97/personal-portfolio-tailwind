@@ -53,7 +53,7 @@ export const Card: React.FC<cardProps> = (props) => {
   //   color: rgb(0, 0, 0);
   // }
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg border-2 border-sky-500">
+    <div className="max-w-sm rounded overflow-hidden shadow-lg border-2 border-sky-500 min-h-[475px]">
       <ImageSlider style={{ background: "black" }} slides={imgArrays} />
 
       <div className="px-6 py-4">
@@ -65,6 +65,7 @@ export const Card: React.FC<cardProps> = (props) => {
             ? props.cardDescription
             : `${props.cardDescription.substring(0, 125)}`}
           {/* TODO: if the string is not log enough maybe dont show the show more or less button */}
+          <br></br>
           <button
             className="text-gray-800 font-semibold rounded shadow"
             onClick={() => setShowMore(!showMore)}
@@ -75,9 +76,14 @@ export const Card: React.FC<cardProps> = (props) => {
         </p>
       </div>
       <div>
-        <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+        <button
+          id="cardButton"
+          className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded "
+        >
           {button}
         </button>
+
+        {/* <!-- Pin to bottom right corner --> */}
       </div>
     </div>
   );

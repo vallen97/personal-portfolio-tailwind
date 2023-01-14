@@ -15,6 +15,7 @@ const ImageSlider = ({ slides }: any) => {
             height={451}
             width={800}
             alt={"image" + index}
+            priority
           />
         );
       })}

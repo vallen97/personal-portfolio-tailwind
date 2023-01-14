@@ -70,8 +70,8 @@ export default function HomePage() {
 
   return (
     <div className="px-8  " style={{ height: "100%" }}>
-      <main className="justify-center items-center flex-col">
-        <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
+      <main className="justify-center place-content-center  flex-col">
+        <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 sm:place-items-center ">
           {projects.map((data: any, index: number) => (
             <React.Fragment key={index.toString()}>
               <Card

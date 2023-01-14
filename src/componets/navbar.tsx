@@ -1,9 +1,17 @@
 import Link from "next/link";
+import { useState, useRef, useEffect } from "react";
 import React from "react";
 
 interface navbarProps {}
 
 export const Navbar: React.FC<navbarProps> = ({}) => {
+  const [expand, setExpand] = useState<boolean>(true);
+  const windowSize = useRef([window.innerWidth, window.innerHeight]);
+
+  useEffect(() => {
+    if (windowSize.current[0] < 1024) setExpand(true);
+  }, []);
+
   return (
     <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6">
       <div className="flex items-center flex-shrink-0 text-white mr-6">
@@ -21,7 +29,10 @@ export const Navbar: React.FC<navbarProps> = ({}) => {
         </span>
       </div>
       <div className="block lg:hidden">
-        <button className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+        <button
+          className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
+          onClick={() => setExpand(!expand)}
+        >
           <svg
             className="fill-current h-3 w-3"
             viewBox="0 0 20 20"
@@ -33,35 +44,43 @@ export const Navbar: React.FC<navbarProps> = ({}) => {
         </button>
       </div>
       <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-        <div className="text-sm lg:flex-grow">
-          <Link
-            href="SortAlgorithm"
-            className="px-1 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
-          >
-            Sort Algorithms
-          </Link>
-          <Link
-            href="SnakeAI"
-            className="px-1 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
-          >
-            Snake AI
-          </Link>
-          <Link
-            href="FlappyBirds"
-            className="px-2 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
-          >
-            Flappy Birds AI
-          </Link>
-          <Link
-            legacyBehavior
-            className="px-2 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
-            href="https://github.com/vallen97"
-          >
-            <a className="px-2" target="_blank" rel="noopener noreferrer">
-              GitHub
-            </a>
-          </Link>
-        </div>
+        {expand ? (
+          <>
+            <div className="text-sm lg:flex-grow">
+              <Link
+                href="SortAlgorithm"
+                className="p-1 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+              >
+                Sort Algorithms
+              </Link>
+              <Link
+                href="SnakeAI"
+                className="p-1 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+              >
+                Snake AI
+              </Link>
+              <Link
+                href="FlappyBirds"
+                className="p-2 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
+              >
+                Flappy Birds AI
+              </Link>
+              <Link
+                legacyBehavior
+                className="p-2 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
+                href="https://github.com/vallen97"
+              >
+                <a className="p-2" target="_blank" rel="noopener noreferrer">
+                  GitHub
+                </a>
+              </Link>
+            </div>
+          </>
+        ) : (
+          <>
+            <div></div>
+          </>
+        )}
       </div>
     </nav>
   );

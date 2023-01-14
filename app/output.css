@@ -528,8 +528,28 @@ video {
   position: relative;
 }
 
+.\!relative {
+  position: relative !important;
+}
+
 .right-0 {
   right: 0px;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.\!bottom-0 {
+  bottom: 0px !important;
+}
+
+.\!left-0 {
+  left: 0px !important;
 }
 
 .col-span-1 {
@@ -596,6 +616,26 @@ video {
   height: 0.75rem;
 }
 
+.h-32 {
+  height: 8rem;
+}
+
+.h-16 {
+  height: 4rem;
+}
+
+.min-h-\[425\] {
+  min-height: 425;
+}
+
+.min-h-\[425px\] {
+  min-height: 425px;
+}
+
+.min-h-\[475px\] {
+  min-height: 475px;
+}
+
 .w-56 {
   width: 14rem;
 }
@@ -610,6 +650,14 @@ video {
 
 .w-3 {
   width: 0.75rem;
+}
+
+.w-32 {
+  width: 8rem;
+}
+
+.w-16 {
+  width: 4rem;
 }
 
 .max-w-sm {
@@ -793,6 +841,14 @@ video {
 
 .p-6 {
   padding: 1.5rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-1 {
+  padding: 0.25rem;
 }
 
 .px-8 {
@@ -1180,6 +1236,10 @@ a {
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .sm\:place-items-center {
+    place-items: center;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1193,6 +1253,10 @@ a {
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:place-items-center {
+    place-items: center;
   }
 }
 
