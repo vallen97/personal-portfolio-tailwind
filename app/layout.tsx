@@ -16,16 +16,16 @@ export default function RootLayout({
     <html lang="en">
       {}
 
-      <body className="h-screen">
+      <body
+        className="h-screen bg-materialUI-LightOnPrimary dark:bg-materialUI-DarkOnPrimary"
+        style={{ height: "100%" }}
+      >
         <Navbar />
-        <div
-          className="bg-materialUI-LightOnPrimary dark:bg-materialUI-DarkOnPrimary "
-          style={{ height: "100%" }}
-        >
+        <div className="py-2 bg-materialUI-LightOnPrimary dark:bg-materialUI-DarkOnPrimary ">
           {children}
         </div>
-        <Footer />
       </body>
+      <Footer />
     </html>
   );
 }
