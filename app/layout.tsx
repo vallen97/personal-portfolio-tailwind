@@ -29,15 +29,16 @@ export default function RootLayout({
       </Head>
 
       <body
-        className="h-screen bg-materialUI-LightOnPrimary dark:bg-materialUI-DarkOnPrimary"
-        style={{ height: "100%" }}
+        className="flex flex-col h-screen justify-between bg-materialUI-LightOnPrimary dark:bg-materialUI-DarkOnPrimary"
+        style={{ height: "-webkit-fill-available" }}
       >
         <Navbar />
-        <div className="py-2 bg-materialUI-LightOnPrimary dark:bg-materialUI-DarkOnPrimary ">
+        <div className="py-2 mb-auto bg-materialUI-LightOnPrimary dark:bg-materialUI-DarkOnPrimary ">
           {children}
         </div>
+        {/* <div className="   bg-blue-500">footer</div> */}
+        <Footer />
       </body>
-      <Footer />
     </html>
   );
 }
