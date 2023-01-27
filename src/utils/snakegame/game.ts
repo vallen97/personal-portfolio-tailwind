@@ -1,6 +1,7 @@
 import * as tf from "@tensorflow/tfjs";
 import "@tensorflow/tfjs-backend-webgl";
 import { Snake as SnakeClass } from "./snake";
+import best_snake from "../../public/best_snake.json";
 
 // References:
 // snake game
@@ -307,7 +308,7 @@ async function loadSnakeModel(type: number, snakeJSON?: any) {
     case 1:
       // load model from website
       try {
-        model = await tf.loadLayersModel("../../public/best_snake.json");
+        model = await tf.loadLayersModel("/assets/snakeai/best_snake.json");
         console.log("Best snakes loaded from url");
         isLoaded = true;
         isWebsiteModel = true;

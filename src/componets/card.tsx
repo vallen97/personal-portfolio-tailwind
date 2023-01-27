@@ -53,20 +53,20 @@ export const Card: React.FC<cardProps> = (props) => {
   //   color: rgb(0, 0, 0);
   // }
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg border-2 border-sky-500 min-h-[475px]">
+    <div className="bg-materialUI-LightOnSecondary dark:bg-materialUI-DarkOnSecondary border-materialUI-LightOnSurfaceVariant dark:border-materialUI-DarkOnSurfaceVariant max-w-sm rounded overflow-hidden shadow-lg border-2 border-sky-500 min-h-[475px]">
       <ImageSlider style={{ background: "black" }} slides={imgArrays} />
 
       <div className="px-6 py-4">
-        <div className=" text-black font-bold text-xl mb-2">
+        <div className=" text-materialUI-LightSecondary dark:text-materialUI-DarkSecondary font-bold text-xl mb-2">
           {props.cardTitle}
         </div>
-        <p className="text-black text-base">
+        <p className=" text-materialUI-LightSecondary dark:text-materialUI-DarkSecondary  text-base">
           {showMore
             ? props.cardDescription
             : `${props.cardDescription.substring(0, 125)}`}
           <br></br>
           <button
-            className="text-gray-800 font-semibold rounded shadow"
+            className=" bg-materialUI-LightOnPrimaryContainer dark:bg-materialUI-DarkPrimaryContainer text-materialUI-LightPrimaryContainer dark:text-materialUI-DarkPrimaryContainer font-semibold rounded shadow"
             onClick={() => setShowMore(!showMore)}
           >
             {showMore ? " Show less" : " Show more"}
@@ -77,7 +77,7 @@ export const Card: React.FC<cardProps> = (props) => {
       <div>
         <button
           id="cardButton"
-          className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded "
+          className="bg-materialUI-LightOnPrimaryContainer dark:bg-materialUI-DarkPrimaryContainer text-materialUI-LightPrimaryContainer dark:text-materialUI-DarkPrimaryContainer  bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded "
         >
           {button}
         </button>

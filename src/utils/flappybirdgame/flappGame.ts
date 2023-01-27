@@ -593,9 +593,7 @@ async function loadBirdModel(type: number, birdJSON?: any) {
     case 1:
       // load model from website
       try {
-        model = await tf.loadLayersModel(
-          "../../public/assets/flappbirds/best_bird.json"
-        );
+        model = await tf.loadLayersModel("/assets/flappbirds/best_bird.json");
         isLoaded = true;
         isWebsiteModel = true;
         loadBest = true;

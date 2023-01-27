@@ -19,7 +19,6 @@ export default function SortAlgorithm() {
   // call setup
 
   let ctx: any;
-  // let algorithm: any;
 
   const buttonName: Array<string> = [
     "Selection Sort",
@@ -50,11 +49,11 @@ export default function SortAlgorithm() {
   }, []);
 
   return (
-    <div className="px-8" style={{ height: "100%" }}>
+    <div className="px-8">
       <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 p-4">
         {buttonName.map((name: string, index: number) => (
           <button
-            className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+            className="bg-materialUI-LightOnPrimaryContainer dark:bg-materialUI-DarkPrimaryContainer text-materialUI-LightPrimaryContainer dark:text-materialUI-DarkPrimaryContainer font-semibold py-2 px-4 rounded"
             id={"btn" + name.replace(/ /g, "")}
             key={index.toString() + "btn"}
             onClick={() => {
@@ -66,7 +65,7 @@ export default function SortAlgorithm() {
         ))}
       </div>
       <div className="px-5">
-        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+        <label className="block mb-2 text-sm font-medium text-materialUI-LightOnPrimaryContainer bg-materialUI-LightPrimaryContainer dark:text-materialUI-DarkOnPrimaryContainer dark:bg-materialUI-DarkPrimaryContainer">
           Current Speed: {Math.pow(Number(currentSpeed), 3)} ms
         </label>
         <input
@@ -76,7 +75,7 @@ export default function SortAlgorithm() {
           min="1"
           max="10"
           value={currentSpeed}
-          className="w-full h-2 bg-black rounded-lg appearance-none cursor-pointer dark:bg-gray-900"
+          className="w-full h-2  rounded-lg appearance-none cursor-pointer"
           onChange={(val: any) => {
             setCurrentSpeed(val.nativeEvent.target.value);
             algorithm.sort.setSpeed(
@@ -86,7 +85,7 @@ export default function SortAlgorithm() {
         />
       </div>
       <div className="px-5">
-        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+        <label className="block mb-2 text-sm font-medium  text-materialUI-LightOnPrimaryContainer bg-materialUI-LightPrimaryContainer dark:text-materialUI-DarkOnPrimaryContainer dark:bg-materialUI-DarkPrimaryContainer">
           Array Size: {currentArraySize}
         </label>
         <input
