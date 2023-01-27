@@ -2,7 +2,6 @@ import { Menu } from "@headlessui/react";
 import React from "react";
 import { Transition } from "@headlessui/react";
 import { Fragment } from "react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 interface dropdownProps {
   mainButtonText: String;
@@ -24,10 +23,6 @@ export const Dropdown: React.FC<dropdownProps> = (props) => {
           <div>
             <Menu.Button className="!bg-materialUI-LightOnPrimaryContainer dark:bg-materialUI-DarkPrimaryContainer text-materialUI-LightPrimaryContainer dark:text-materialUI-DarkPrimaryContainer inline-flex w-full justify-center !text-center rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
               {props.mainButtonText}
-              <ChevronDownIcon
-                className="ml-2 -mr-1 h-5 w-5 text-violet-200 hover:text-violet-100"
-                aria-hidden="true"
-              />
             </Menu.Button>
           </div>
           <Transition

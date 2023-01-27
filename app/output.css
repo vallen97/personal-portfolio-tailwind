@@ -521,10 +521,6 @@ video {
   grid-column: span 1 / span 1;
 }
 
-.m-auto {
-  margin: auto;
-}
-
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -601,6 +597,10 @@ video {
   display: none;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
 .h-2 {
   height: 0.5rem;
 }
@@ -611,10 +611,6 @@ video {
 
 .h-3 {
   height: 0.75rem;
-}
-
-.h-screen {
-  height: 100vh;
 }
 
 .min-h-\[475px\] {
