@@ -130,6 +130,7 @@ export default function page() {
           max="10"
           value={currentSpeed}
           className="w-full h-2 bg-blackrounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+          aris-label={"Slider that adjust the speed of the snakes"}
           onChange={(val: any) => {
             setCurrentSpeed(val.nativeEvent.target.value);
 
@@ -158,6 +159,7 @@ export default function page() {
           max="100"
           value={numberOfSnakes}
           className="w-full h-2 bg-black rounded-lg appearance-none cursor-pointer dark:bg-gray-900"
+          aris-label={"Slider that adjust the number of snakes"}
           onChange={(val: any) => {
             setNumberOfSnakes(val.nativeEvent.target.value);
 

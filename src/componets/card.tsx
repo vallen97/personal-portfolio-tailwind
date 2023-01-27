@@ -53,14 +53,14 @@ export const Card: React.FC<cardProps> = (props) => {
   //   color: rgb(0, 0, 0);
   // }
   return (
-    <div className="bg-materialUI-LightOnSecondary dark:bg-materialUI-DarkOnSecondary border-materialUI-LightOnSurfaceVariant dark:border-materialUI-DarkOnSurfaceVariant max-w-sm rounded overflow-hidden shadow-lg border-2 border-sky-500 min-h-[475px]">
+    <div className="bg-materialUI-LightOnBackground dark:bg-materialUI-DarkOnBackground border-materialUI-LightOnSurfaceVariant dark:border-materialUI-DarkOnSurfaceVariant max-w-sm rounded overflow-hidden shadow-lg border-2 border-sky-500 min-h-[475px]">
       <ImageSlider style={{ background: "black" }} slides={imgArrays} />
 
       <div className="px-6 py-4">
-        <div className=" text-materialUI-LightSecondary dark:text-materialUI-DarkSecondary font-bold text-xl mb-2">
+        <div className=" text-materialUI-LightBackground dark:text-materialUI-DarkBackground font-bold text-xl mb-2">
           {props.cardTitle}
         </div>
-        <p className=" text-materialUI-LightSecondary dark:text-materialUI-DarkSecondary  text-base">
+        <p className=" text-materialUI-LightBackground dark:text-materialUI-DarkBackground  text-base">
           {showMore
             ? props.cardDescription
             : `${props.cardDescription.substring(0, 125)}`}

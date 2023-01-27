@@ -179,9 +179,7 @@ async function numerousSort(sortingNumber: number) {
         });
       });
     })
-    .catch((error) => {
-      console.log(error);
-    });
+    .catch((error) => {});
 }
 
 function setDrawArray() {

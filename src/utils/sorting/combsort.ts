@@ -4,8 +4,6 @@ let sortingSpeed: number;
 let isSorting: boolean = true;
 
 export const CombSort = () => {
-  console.log(document.getElementById("sliderSpeed"));
-
   return {
     comb: async (
       arr: Array<number>,
