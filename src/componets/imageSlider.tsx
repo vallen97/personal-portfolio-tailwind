@@ -11,10 +11,11 @@ const ImageSlider = ({ slides }: any) => {
         return (
           <Image
             key={index}
-            src={slide.image}
+            src={slide.image + ".PNG"}
             height={451}
             width={800}
             alt={"image" + index}
+            blurDataURL={slide.image + "blurred.jpg"}
             priority
           />
         );
